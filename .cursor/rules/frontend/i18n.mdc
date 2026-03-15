@@ -1,7 +1,7 @@
 ---
-description: "USE WHEN: Managing translation files (JSON), localization keys, or implementing multi-language logic."
-globs: "src/messages/**/*.json,src/i18n/**/*.{ts,tsx},src/features/**"
 alwaysApply: false
+description: USE WHEN: Managing translation files (JSON), localization keys, or implementing multi-language logic.
+globs: src/messages/**/*.json,src/i18n/**/*.{ts,tsx},src/features/**
 ---
 
 # Internationalization (i18n)

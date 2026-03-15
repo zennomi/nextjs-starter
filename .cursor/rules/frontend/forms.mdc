@@ -1,7 +1,7 @@
 ---
-description: "USE WHEN: Constructing forms, validating inputs, and managing form state with Zod schemas."
-globs: "src/features/**/components/*Form*.tsx,src/features/**/schemas/*.ts"
 alwaysApply: false
+description: USE WHEN: Constructing forms, validating inputs, and managing form state with Zod schemas.
+globs: src/features/**/components/*Form*.tsx,src/features/**/schemas/*.ts
 ---
 
 # Form Management

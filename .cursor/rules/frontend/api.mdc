@@ -1,7 +1,7 @@
 ---
-description: "USE WHEN: Defining HTTP requests, endpoints, and handling API responses."
-globs: "src/lib/api.ts,src/features/**/api/*.{ts,tsx}"
 alwaysApply: false
+description: USE WHEN: Defining HTTP requests, endpoints, and handling API responses.
+globs: src/lib/api.ts,src/features/**/api/*.{ts,tsx}
 ---
 
 # API Layer

@@ -1,8 +1,9 @@
 ---
+alwaysApply: false
 description: TanStack Start Routing, Loaders, and Server Functions Standards
 globs: src/routes/**/*.{ts,tsx}
-alwaysApply: false
 ---
+
 # TanStack Start Constitution
 
 ## Constraints

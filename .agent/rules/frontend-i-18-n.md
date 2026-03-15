@@ -1,0 +1,40 @@
+---
+trigger: glob
+globs: "src/messages/**/*.json,src/i18n/**/*.{ts,tsx},src/features/**"
+---
+
+# Internationalization (i18n)
+
+## Constraints
+
+- **Library Selection:** Delegate specific hook/method usage to the framework constitution (`nextjs.mdc` or `tanstack-start.mdc`).
+- **Keys:** Use flat or max 3-level deep JSON structures. Use `camelCase` for keys.
+- **SSOT:** All translation keys MUST be defined in `src/messages/`.
+- **Type Safety:** Use the library's native type-generation features. Magic strings for keys are forbidden.
+- **Namespacing:** Use namespaces for features (e.g., `auth.login`, `profile.settings`) to maintain modularity.
+
+## Bans
+
+- Hardcoded strings in UI components.
+- Dynamic key construction (e.g., `t("prefix." + variable)`).
+- Reading locale via `window.location` or manual URL parsing.
+- JSON hierarchy deeper than 3 levels.
+- Async translation loading that causes layout shifts.
+
+## Correct Implementation
+
+<example>
+// Common Pattern (Usage details delegated to framework MDC)
+const t = useTranslations("auth");
+return <button>{t("loginButton")}</button>;
+</example>
+
+## Incorrect Implementation
+
+<incorrect-example>
+// BAN: Hardcoded string
+return <button>Login</button>;
+
+// BAN: Dynamic key generation
+const label = t("welcome\_" + type);
+</incorrect-example>

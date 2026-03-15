@@ -1,7 +1,7 @@
 ---
-description: "USE WHEN: Managing global client state with Zustand and handling client-side state logic."
-globs: "src/stores/**/*.ts,src/features/**/stores/**/*.ts"
 alwaysApply: false
+description: USE WHEN: Managing global client state with Zustand and handling client-side state logic.
+globs: src/stores/**/*.ts,src/features/**/stores/**/*.ts
 ---
 
 # State Management

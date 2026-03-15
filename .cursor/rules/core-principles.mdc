@@ -1,6 +1,7 @@
 ---
-description: "USE WHEN: Applying core principles and enforcing global project constraints."
 alwaysApply: true
+description: USE WHEN: Applying core principles and enforcing global project constraints.
+globs: **/*
 ---
 
 # Core Constitution

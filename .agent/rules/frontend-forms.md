@@ -1,0 +1,44 @@
+---
+trigger: glob
+globs: "src/features/**/components/*Form*.tsx,src/features/**/schemas/*.ts"
+---
+
+# Form Management
+
+## Constraints
+
+- **Library:** Use `react-hook-form` + `@hookform/resolvers/zod`.
+- **Schema:** Store schemas in `features/[feature]/schemas/`.
+- **Defaults:** Define `defaultValues` fully using `z.infer` from the schema.
+- **Performance:** Use `useWatch` or `Controller` instead of `watch`.
+- **Submission:** Use `handleSubmit`. Prevent double clicks with `isSubmitting`.
+- **Errors:** Map server errors using `setError`.
+
+## Bans
+
+- Manually managing native `form` submit events.
+- Using `watch()` at the root level.
+- Synchronizing form state with `useEffect`.
+- Defining schemas inside component files.
+- Managing form inputs with `useState`.
+
+## Correct Implementation
+
+<example>
+```tsx
+const form = useForm<z.infer<typeof Schema>>({
+  resolver: zodResolver(Schema),
+  defaultValues: { email: "" }
+});
+const email = useWatch({ control: form.control, name: "email" });
+```
+</example>
+
+## Incorrect Implementation
+
+<incorrect-example>
+```tsx
+const [email, setEmail] = useState("");
+const values = form.watch(); // Root watch
+```
+</incorrect-example>

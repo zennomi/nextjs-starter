@@ -1,7 +1,7 @@
 ---
-description: "USE WHEN: Writing unit, integration, or component tests. Mandatory for logic in features."
-globs: "**/*.{test,spec}.{ts,tsx}"
 alwaysApply: false
+description: USE WHEN: Writing unit, integration, or component tests. Mandatory for logic in features.
+globs: **/*.{test,spec}.{ts,tsx}
 ---
 
 # Testing Guide (Pragmatic)
