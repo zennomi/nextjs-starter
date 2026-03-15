@@ -1,7 +1,6 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 
@@ -18,11 +17,8 @@ import {
 import { createAuthSchema, type AuthFormValues } from "@/features/landing/schemas/auth.schema";
 
 export function AuthForm() {
-  const tForm = useTranslations("AuthForm");
-  const tSchema = useTranslations("AuthSchema");
-
   const form = useForm<AuthFormValues>({
-    resolver: zodResolver(createAuthSchema(tSchema)),
+    resolver: zodResolver(createAuthSchema()),
     defaultValues: { username: "", password: "" }
   });
 
@@ -42,13 +38,9 @@ export function AuthForm() {
             name="username"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{tForm("usernameLabel")}</FormLabel>
+                <FormLabel>Username</FormLabel>
                 <FormControl>
-                  <Input
-                    placeholder={tForm("usernamePlaceholder")}
-                    autoComplete="username"
-                    {...field}
-                  />
+                  <Input placeholder="johndoe" autoComplete="username" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -60,11 +52,11 @@ export function AuthForm() {
             name="password"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{tForm("passwordLabel")}</FormLabel>
+                <FormLabel>Password</FormLabel>
                 <FormControl>
                   <Input
                     type="password"
-                    placeholder={tForm("passwordPlaceholder")}
+                    placeholder="••••••••"
                     autoComplete="current-password"
                     {...field}
                   />
@@ -75,7 +67,7 @@ export function AuthForm() {
           />
 
           <Button type="submit" className="w-full">
-            {tForm("submit")}
+            Sign In
           </Button>
         </form>
       </Form>

@@ -1,12 +1,12 @@
 import { z } from "zod";
 
-export function createAuthSchema(t: (key: string) => string) {
+export function createAuthSchema() {
   return z.object({
     username: z
       .string()
-      .min(3, t("usernameMin"))
-      .regex(/^[a-zA-Z0-9_]+$/, t("usernameRegex")),
-    password: z.string().min(6, t("passwordMin"))
+      .min(3, "Username must be at least 3 characters")
+      .regex(/^[a-zA-Z0-9_]+$/, "Only letters, numbers and underscores are allowed"),
+    password: z.string().min(6, "Password must be at least 6 characters")
   });
 }
 

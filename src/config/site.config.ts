@@ -1,14 +1,13 @@
 import type { SiteConfig } from "@/types/site-config.types";
-import { DEFAULT_LOCALE } from "@/constants/i18n.constants";
 import { env } from "@/env";
 
-// FIXME: Update site branding, default locale, theme color, social links, languages and OG image
+// FIXME: Update site branding, default locale, theme color, social links and OG image
 export const siteConfig: SiteConfig = {
   name: "Nizam | Next.js 16 Boilerplate",
   description: "Production-ready Next.js 16+ starter built with Tailwind CSS 4 and TypeScript.",
   url: env.NEXT_PUBLIC_SITE_URL,
   author: "Ömer Gülçiçek",
-  locale: DEFAULT_LOCALE,
+  locale: "en-US",
   themeColor: "#ffffff",
   keywords: ["nextjs", "typescript", "tailwindcss", "boilerplate", "starter"],
   social: {
@@ -16,10 +15,5 @@ export const siteConfig: SiteConfig = {
     github: "omergulcicek",
     linkedin: "omergulcicek"
   },
-  ogImage: "/og.jpg",
-  languages: {
-    tr: "/tr",
-    en: "/en",
-    "x-default": "/en"
-  }
+  ogImage: "/og.jpg"
 } as const;

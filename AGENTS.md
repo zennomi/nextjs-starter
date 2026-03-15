@@ -1,6 +1,6 @@
 Please also reference the following rules as needed. The list below is provided in TOON format, and `@` stands for the project root directory.
 
-rules[13]:
+rules[12]:
 
 - path: @.codex/memories/core-principles.md
   description: "USE WHEN: Applying core principles and enforcing global project constraints."
@@ -11,9 +11,6 @@ rules[13]:
 - path: @.codex/memories/frontend/forms.md
   description: "USE WHEN: Constructing forms, validating inputs, and managing form state with Zod schemas."
   applyTo[2]: src/features/**/components/_Form_.tsx,src/features/**/schemas/\*.ts
-- path: @.codex/memories/frontend/i18n.md
-  description: "USE WHEN: Managing translation files (JSON), localization keys, or implementing multi-language logic."
-  applyTo[4]: src/messages/**/\*.json,"src/i18n/**/\*.{ts","tsx}",src/features/\*\*
 - path: @.codex/memories/frontend/nextjs.md
   description: Next.js 16 App Router Standards & Constraints
   applyTo[5]: "src/app/\*\*/{page",layout,loading,error,"not-found}.tsx"

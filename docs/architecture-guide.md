@@ -47,9 +47,7 @@ src/
 ├── constants/
 ├── helpers/
 ├── hooks/
-├── i18n/
 ├── lib/
-├── messages/
 ├── providers/
 ├── schemas/
 ├── stores/
@@ -97,7 +95,6 @@ This document is the architectural map. Enforceable laws are located in:
 - `Ref: .cursor/rules/core-principles.mdc`
 - `Ref: .cursor/rules/frontend/api.mdc`
 - `Ref: .cursor/rules/frontend/forms.mdc`
-- `Ref: .cursor/rules/frontend/i18n.mdc`
 - `Ref: .cursor/rules/frontend/nextjs.mdc`
 - `Ref: .cursor/rules/frontend/performance.mdc`
 - `Ref: .cursor/rules/frontend/react-best-practices.mdc`

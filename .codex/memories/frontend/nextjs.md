@@ -6,7 +6,6 @@
 - **Client Component Usage:** The `"use client"` directive is strictly limited to leaf-node components that require interactivity (hooks, events) or Browser APIs.
 - **Feature Delegation:** `src/app` is strictly for routing/layout. All business logic, UI components, and domain hooks MUST reside in `src/features`.
 - **Server Actions:** All mutations MUST use Server Actions defined in dedicated `actions.ts` files within `src/features`. Actions MUST call the API layer only; direct database access inside actions is forbidden.
-- **i18n Implementation:** Use `next-intl` for translations. Follow the patterns defined in `i18n.mdc`.
 - **Metadata:** SEO metadata MUST be defined using the Metadata API in `page.tsx` or `layout.tsx`.
 - **Streaming:** Use `loading.tsx` for route-level async states. Use `<Suspense>` for granular feature-level hydration.
 - **CSRF Protection:** Verify Origin/Referer headers in Server Actions. Use `action.bind` to lock sensitive IDs on the server-side.
@@ -27,11 +26,9 @@
 // src/app/dashboard/page.tsx
 import { DashboardFeature } from "@/features/dashboard";
 import { getDashboardData } from "@/features/dashboard/api";
-import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata() {
-const t = await getTranslations("dashboard");
-return { title: t("title") };
+return { title: "Dashboard" };
 }
 
 export default async function DashboardPage() {

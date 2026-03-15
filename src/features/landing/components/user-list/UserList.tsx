@@ -12,7 +12,6 @@ import {
   useReactTable
 } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
-import { useTranslations } from "next-intl";
 
 import { Input, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/ui";
 import { useUsers } from "@/features/landing/hooks/use-users";
@@ -20,7 +19,6 @@ import type { User } from "@/features/landing/types/user.types";
 
 export function UserList() {
   const { data = [], isPending, isError, error } = useUsers();
-  const t = useTranslations("UserList");
 
   const [sorting, setSorting] = useState<SortingState>([]);
   const [globalFilter, setGlobalFilter] = useState<string>("");
@@ -35,7 +33,7 @@ export function UserList() {
             className="flex cursor-pointer items-center gap-2 [&_svg]:size-4"
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           >
-            {t("id")}
+            ID
             <ArrowUpDown />
           </button>
         )
@@ -48,19 +46,19 @@ export function UserList() {
             className="flex cursor-pointer items-center gap-2 [&_svg]:size-4"
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           >
-            {t("name")}
+            Name
             <ArrowUpDown />
           </button>
         )
       },
       {
         accessorKey: "email",
-        header: () => <span>{t("email")}</span>,
+        header: () => <span>Email</span>,
         enableSorting: false,
         cell: ({ row }) => <div className="lowercase">{row.getValue<string>("email")}</div>
       }
     ],
-    [t]
+    []
   );
 
   /**
@@ -83,9 +81,7 @@ export function UserList() {
   if (isError) {
     return (
       <section className="mt-10">
-        <div>
-          {t("error")}: {error instanceof Error ? error.message : String(error)}
-        </div>
+        <div>Error: {error instanceof Error ? error.message : String(error)}</div>
       </section>
     );
   }
@@ -94,7 +90,7 @@ export function UserList() {
     <section className="col-span-3 lg:col-span-2">
       <div className="flex items-center py-4">
         <Input
-          placeholder={t("searchPlaceholder")}
+          placeholder="Search users..."
           value={globalFilter}
           onChange={(e) => setGlobalFilter(e.target.value)}
           className="max-w-56"
@@ -119,7 +115,7 @@ export function UserList() {
             {isPending ? (
               <TableRow>
                 <TableCell colSpan={columns.length} className="h-24 text-center">
-                  {t("loading")}
+                  Loading...
                 </TableCell>
               </TableRow>
             ) : table.getRowModel().rows?.length ? (
@@ -135,7 +131,7 @@ export function UserList() {
             ) : (
               <TableRow>
                 <TableCell colSpan={columns.length} className="h-24 text-center">
-                  {t("noResults")}
+                  No results.
                 </TableCell>
               </TableRow>
             )}

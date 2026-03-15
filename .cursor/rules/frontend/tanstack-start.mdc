@@ -16,7 +16,6 @@ globs: src/routes/**/*.{ts,tsx}
 - **Hydration:** Rely on loader prefetching for data hydration. Do not use Next.js-specific patterns like manual dehydration.
 - **Server Functions:** Wrap all backend-only logic in standalone `serverFn`. Functions MUST act as a bridge to the API layer; keep database orchestration and business logic inside src/features/api or helpers.
 - **Search Params:** Validate all search params with `validateSearch` using a Zod schema. Never trust raw search values.
-- **i18n Implementation:** Use `paraglide-js` for translations. Follow the patterns defined in `i18n.mdc`.
 - **Error Handling:** Provide `errorComponent` for failure states. Handle expected errors in the loader.
 - **Loading UI:** Provide `pendingComponent` for async states when needed.
 - **Not Found:** Provide `notFoundComponent` for missing resources.
@@ -41,13 +40,13 @@ import { PostFeature } from '@/features/posts';
 import { getPostById } from '@/features/posts/api';
 
 export const Route = createFileRoute('/posts/$postId')({
-  loader: ({ params }) => getPostById(params.postId),
-  component: PostPage,
+loader: ({ params }) => getPostById(params.postId),
+component: PostPage,
 });
 
 function PostPage() {
-  const post = Route.useLoaderData();
-  return <PostFeature post={post} />;
+const post = Route.useLoaderData();
+return <PostFeature post={post} />;
 }
 </example>
 
@@ -57,11 +56,11 @@ import { createServerFn } from '@tanstack/start';
 import { z } from 'zod';
 
 export const loginFn = createServerFn({ method: 'POST' })
-  .validator(z.object({ email: z.string().email() }))
-  .handler(async ({ data }) => {
-    // Server-side logic here
-    return { success: true };
-  });
+.validator(z.object({ email: z.string().email() }))
+.handler(async ({ data }) => {
+// Server-side logic here
+return { success: true };
+});
 </example>
 
 ## Incorrect Implementation

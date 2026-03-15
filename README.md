@@ -20,14 +20,13 @@ A production-ready **Next.js 16** boilerplate designed for scalability, performa
 - [TanStack Query 5](https://tanstack.com/query/latest) for data fetching and caching
 - [Zustand](https://zustand-demo.pmnd.rs) for lightweight global state management
 - [Zod](https://zod.dev/) + [@t3-oss/env-nextjs](https://env.t3.gg) for runtime validation
-- [next-intl](https://next-intl-docs.vercel.app) for internationalization
 - [Next Themes](https://github.com/pacocoursey/next-themes) for dynamic light/dark modes
 - [Lucide](https://lucide.dev) icons and [Sonner](https://sonner.emilkowal.ski) for notifications
 - [Google Analytics](https://analytics.google.com/) integration
 - [ESLint 9](https://eslint.org/), [Prettier 3](https://prettier.io/), [Husky](https://github.com/typicode/husky), [lint-staged](https://github.com/okonet/lint-staged), and [Knip](https://knip.dev) for code quality
 - SEO-ready with metadata, sitemap, and robots.txt generation
-- **Error Handling**: Built-in `error.tsx` and `global-error.tsx` with i18n support and graceful degradation
-- **AI-ready**: `llms.txt` & `llms-full.txt` in `/public` plus `.cursor/rules` for LLM context and agent collaboration
+- **Error Handling**: Built-in `error.tsx` and `global-error.tsx` with graceful degradation
+- **AI-ready**: `.cursor/rules` for LLM context and agent collaboration
 - Bundler Analyzer
 - Absolute Imports using `@` prefix
 - Lighthouse Score: `100`
@@ -40,7 +39,6 @@ Nizam is designed and powered by [Kaide](https://github.com/omergulcicek/kaide),
 
 Nizam is fully aligned with 2026 AI-driven development standards. It is built on [Kaide](https://github.com/omergulcicek/kaide) (see **Built with Kaide** above). So that AI agents (Cursor, Windsurf, etc.) can understand the project in seconds, it includes the following optimizations:
 
-- **llms.txt & llms-full.txt**: These files live in the `/public` directory and provide LLMs with high-quality context about the project’s architecture and tech stack.
 - **.cursor/rules**: Project-specific rules ensure that when coding with AI assistance, Nizam’s architectural conventions stay consistent.
 
 ## Why No Auth or Testing?
@@ -90,17 +88,16 @@ You can quickly tailor the Next.js Boilerplate to your needs by searching the pr
 - `src/env.ts`: environment variables schema (required/optional fields)
 - `src/app/robots.ts`: Robots.txt configuration for search engines
 - `src/app/sitemap.ts`: Dynamic sitemap generation for SEO
-- `src/config/site.config.ts`: site name, description, URL, social accounts, default locales
+- `src/config/site.config.ts`: site name, description, URL, social accounts, locale
 - `src/config/seo.config.ts`: Metadata-based SEO settings (title, description, Open Graph, Twitter)
-- `src/constants/i18n.constants.ts`: Localization settings (supported and default locales)
 - `src/lib/api.ts`: Axios instance and request helpers based on `NEXT_PUBLIC_API_URL`
 
 ## Project structure
 
 ```
-├── public/                             # Public assets (llms.txt, llms-full.txt, static files)
+├── public/                             # Public assets (static files)
 ├── src/
-│   ├── app/                            # App Router with locale support
+│   ├── app/                            # App Router
 │   ├── assets/                         # Static and vector assets
 │   ├── components/                     # UI and shared components
 │   │   ├── icons                       # Svg icons
@@ -108,13 +105,11 @@ You can quickly tailor the Next.js Boilerplate to your needs by searching the pr
 │   │   ├── shared                      # Shared domain components
 │   │   └── ui                          # Atomic and reusable UI elements
 │   ├── config/                         # Site and SEO configurations
-│   ├── constants/                      # Global constants (i18n, date, etc.)
+│   ├── constants/                      # Global constants (date, etc.)
 │   ├── features/                       # Feature-based modules
 │   ├── hooks/                          # Custom React hooks
-│   ├── i18n/                           # next-intl configurations
 │   ├── lib/                            # Utilities and API layer
-│   ├── messages/                       # Translation files (JSON)
-│   ├── providers/                      # App-wide providers (Theme, Query, Intl)
+│   ├── providers/                      # App-wide providers (Theme, Query)
 │   ├── schemas/                        # Zod validation schemas
 │   ├── stores/                         # Application-wide state management
 │   ├── styles/                         # Base styling and Tailwind setup
@@ -127,7 +122,7 @@ You can quickly tailor the Next.js Boilerplate to your needs by searching the pr
 
 ## Tips & Recommendations
 
-- **Cursor rules (for Cursor users)**: This repository centralizes AI/editor collaboration rules in `.cursor/rules`. For AI agents, see also **AI-Ready Architecture** above and the `llms.txt` / `llms-full.txt` files in `/public`. Keep rules aligned with the conventions in this README (naming, structure, types, a11y, styling).
+- **Cursor rules (for Cursor users)**: This repository centralizes AI/editor collaboration rules in `.cursor/rules`. Keep rules aligned with the conventions in this README (naming, structure, types, a11y, styling).
 
 - **Cookies (server-side)**: Use Next.js App Router APIs for cookies.
   - `cookies()` from `next/headers` (read/write in server components/actions)
@@ -135,9 +130,7 @@ You can quickly tailor the Next.js Boilerplate to your needs by searching the pr
   - Docs: `https://nextjs.org/docs/app/api-reference/functions/cookies`
 
 - **Helpers (formatting & slug)**:
-  - Currency/number/date formatting via `next-intl`:
-    - Client: `useFormatter()`
-    - Server: `getFormatter()`
+  - Date formatting: `src/lib/date.ts`
   - Slug generation: `@sindresorhus/slugify`
 
 - **Useful hooks (`usehooks-ts`)**: Recommended utilities for common needs
@@ -165,20 +158,19 @@ import { Button } from "@/ui";
 
 The following naming conventions are recommended for the project.
 
-| Type                               | Example                              | Style                         |
-| ---------------------------------- | ------------------------------------ | ----------------------------- |
-| Folders & base files               | `locale-switcher`, `query-client.ts` | kebab-case                    |
-| Components (widgets/layouts/pages) | `UserList.tsx`                       | PascalCase                    |
-| UI elements                        | `button.tsx`                         | kebab-case                    |
-| Helper / util files                | `format-currency.ts`                 | kebab-case                    |
-| Hook files                         | `use-users.ts`                       | kebab-case (prefix `use-`)    |
-| Hook functions                     | `useUsers`                           | camelCase (prefix `use`)      |
-| Data files                         | `user.data.ts`                       | kebab-case                    |
-| Store files                        | `counter.store.ts`                   | kebab-case                    |
-| Icons                              | `ReactIcon`                          | PascalCase (suffix `Icon`)    |
-| Types & interfaces                 | `User`, `SiteConfig`                 | PascalCase (no `Type` suffix) |
-| Type files                         | `user.types.ts`                      | kebab-case                    |
-| Constants                          | `i18n.constants.ts`                  | kebab-case                    |
+| Type                               | Example              | Style                         |
+| ---------------------------------- | -------------------- | ----------------------------- |
+| Folders & base files               | `query-client.ts`    | kebab-case                    |
+| Components (widgets/layouts/pages) | `UserList.tsx`       | PascalCase                    |
+| UI elements                        | `button.tsx`         | kebab-case                    |
+| Helper / util files                | `format-currency.ts` | kebab-case                    |
+| Hook files                         | `use-users.ts`       | kebab-case (prefix `use-`)    |
+| Hook functions                     | `useUsers`           | camelCase (prefix `use`)      |
+| Data files                         | `user.data.ts`       | kebab-case                    |
+| Store files                        | `counter.store.ts`   | kebab-case                    |
+| Icons                              | `ReactIcon`          | PascalCase (suffix `Icon`)    |
+| Types & interfaces                 | `User`, `SiteConfig` | PascalCase (no `Type` suffix) |
+| Type files                         | `user.types.ts`      | kebab-case                    |
 
 ## Useful commands
 

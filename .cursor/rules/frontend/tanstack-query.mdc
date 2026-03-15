@@ -36,10 +36,10 @@ export const skillKeys = {
 
 // features/skills/hooks/use-get-skills.ts
 export const useGetSkills = (filters: object) =>
-  useQuery({
-    queryKey: skillKeys.list(filters),
-    queryFn: ({ signal }) => getSkills(filters, signal),
-  });
+useQuery({
+queryKey: skillKeys.list(filters),
+queryFn: ({ signal }) => getSkills(filters, signal),
+});
 </example>
 
 ## Incorrect Implementation

@@ -3,7 +3,6 @@
 import Link from "next/link";
 
 import { GitBranch, Github, Rocket } from "lucide-react";
-import { useTranslations } from "next-intl";
 import { Balancer } from "react-wrap-balancer";
 
 import { env } from "@/env";
@@ -13,8 +12,6 @@ import { StackList } from "@/features/landing";
 import { stackData } from "@/features/landing/data/stack-data";
 
 export function Dashboard() {
-  const t = useTranslations("Dashboard");
-
   return (
     <section className="container py-16">
       <div className="flex flex-col items-center justify-center gap-6">
@@ -22,22 +19,22 @@ export function Dashboard() {
           as="h1"
           className="text-center text-2xl font-bold text-black lg:text-5xl dark:text-white"
         >
-          {t("title")}
+          Nizam - Next.js 16 Boilerplate
         </Balancer>
 
         <Balancer as="p" className="max-w-3xl px-3 text-center text-base">
-          {t.rich("description", {
-            react: (chunks) => <strong className="font-semibold">{chunks}</strong>,
-            typescript: (chunks) => <strong className="font-semibold">{chunks}</strong>,
-            tailwind: (chunks) => <strong className="font-semibold">{chunks}</strong>,
-            tanstack: (chunks) => <strong className="font-semibold">{chunks}</strong>
-          })}
+          Open-source boilerplate for modern Next.js applications, featuring{" "}
+          <strong className="font-semibold">React</strong>,{" "}
+          <strong className="font-semibold">TypeScript</strong>,{" "}
+          <strong className="font-semibold">Tailwind CSS</strong>, and{" "}
+          <strong className="font-semibold">TanStack Query</strong>. Includes reusable components,
+          hooks, and utilities to speed up development.
         </Balancer>
 
         <Button asChild>
           <Link href={env.NEXT_PUBLIC_GITHUB_URL} target="_blank" rel="noopener noreferrer">
             <Github className="h-4 w-4" aria-hidden="true" />
-            {t("starOnGithub")}
+            Star on Github
           </Link>
         </Button>
       </div>
@@ -52,7 +49,7 @@ export function Dashboard() {
             rel="noopener noreferrer"
           >
             <Rocket className="h-4 w-4" aria-hidden="true" />
-            {t("deployToVercel")}
+            Deploy to Vercel
           </Link>
         </Button>
         <Button variant="outline" size="sm" asChild>
@@ -62,7 +59,7 @@ export function Dashboard() {
             rel="noopener noreferrer"
           >
             <GitBranch className="h-4 w-4" aria-hidden="true" />
-            {t("useTemplate")}
+            Use Template
           </Link>
         </Button>
       </div>

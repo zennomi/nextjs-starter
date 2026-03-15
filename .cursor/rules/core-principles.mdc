@@ -8,7 +8,7 @@ globs: **/*
 
 ## Constraints
 
-- **INTENTIONAL_TODO Rule:** Usage is ONLY permitted for non-functional placeholders (e.g., temporary mock UI, future logging). 
+- **INTENTIONAL_TODO Rule:** Usage is ONLY permitted for non-functional placeholders (e.g., temporary mock UI, future logging).
 - **Business Integrity:** Forbidden to use `INTENTIONAL_TODO` for business logic, error handling, or API integrations.
 - **Pseudo-code:** Forbidden. Provide working TypeScript/React code.
 - **Reference:** Do not say "Usually done like this"; link to repo rules.

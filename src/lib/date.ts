@@ -6,7 +6,7 @@ import {
   parseISO
 } from "date-fns";
 
-import { DATE_PATTERN, DATEFNS_LOCALES, normalizeLocale } from "@/constants/date.constants";
+import { DATE_PATTERN, DATEFNS_LOCALE } from "@/constants/date.constants";
 
 export const parseDate = (value?: string | null) => {
   if (!value) return null;
@@ -20,18 +20,16 @@ const toDate = (v: Date | string | null | undefined) => {
   return parseDate(v);
 };
 
-export const formatDate = (date: Date | string, locale?: string, pattern = DATE_PATTERN.DATE) => {
+export const formatDate = (date: Date | string, pattern = DATE_PATTERN.DATE) => {
   const d = toDate(date);
   if (!d) return "-";
-  const loc = DATEFNS_LOCALES[normalizeLocale(locale)];
-  return format(d, pattern, { locale: loc });
+  return format(d, pattern, { locale: DATEFNS_LOCALE });
 };
 
-export const timeAgo = (date: Date | string, locale?: string) => {
+export const timeAgo = (date: Date | string) => {
   const d = toDate(date);
   if (!d) return "-";
-  const loc = DATEFNS_LOCALES[normalizeLocale(locale)];
-  return formatDistanceToNowStrict(d, { addSuffix: true, locale: loc });
+  return formatDistanceToNowStrict(d, { addSuffix: true, locale: DATEFNS_LOCALE });
 };
 
 export const isToday = (date: Date | string) => {

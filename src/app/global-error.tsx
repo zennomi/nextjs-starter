@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import { DEFAULT_LOCALE } from "@/constants/i18n.constants";
+import { siteConfig } from "@/config/site.config";
 
 import "@/styles/tailwind.css";
 
@@ -16,7 +16,7 @@ export default function GlobalError({
   const isDev = process.env.NODE_ENV === "development";
 
   return (
-    <html lang={DEFAULT_LOCALE}>
+    <html lang={siteConfig.locale}>
       <body className="flex min-h-screen flex-col items-center justify-center gap-4 bg-background text-center text-foreground antialiased">
         <h2 className="text-2xl font-bold">Something went wrong!</h2>
         {isDev && error?.message && (
@@ -30,7 +30,7 @@ export default function GlobalError({
             Try again
           </button>
           <Link
-            href={`/${DEFAULT_LOCALE}`}
+            href="/"
             className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
           >
             Go to home
