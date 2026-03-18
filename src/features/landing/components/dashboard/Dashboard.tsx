@@ -2,10 +2,8 @@
 
 import Link from "next/link";
 
-import { GitBranch, Github, Rocket } from "lucide-react";
+import { GitBranch, Rocket } from "lucide-react";
 import { Balancer } from "react-wrap-balancer";
-
-import { env } from "@/env";
 
 import { Button } from "@/ui";
 import { StackList } from "@/features/landing";
@@ -30,13 +28,6 @@ export function Dashboard() {
           <strong className="font-semibold">TanStack Query</strong>. Includes reusable components,
           hooks, and utilities to speed up development.
         </Balancer>
-
-        <Button asChild>
-          <Link href={env.NEXT_PUBLIC_GITHUB_URL} target="_blank" rel="noopener noreferrer">
-            <Github className="h-4 w-4" aria-hidden="true" />
-            Star on Github
-          </Link>
-        </Button>
       </div>
 
       <StackList data={stackData} />
