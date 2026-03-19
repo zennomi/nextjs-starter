@@ -1,8 +1,7 @@
 ---
 trigger: glob
-globs: "**/*.{test,spec}.{ts,tsx}"
+globs: '**/*.{test,spec}.{ts,tsx}'
 ---
-
 # Testing Guide (Pragmatic)
 
 ## Principles

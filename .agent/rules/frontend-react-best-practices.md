@@ -1,8 +1,7 @@
 ---
 trigger: glob
-globs: "src/components/**/*.{ts,tsx},src/hooks/**/*.{ts,tsx}"
+globs: 'src/components/**/*.{ts,tsx},src/hooks/**/*.{ts,tsx}'
 ---
-
 # React Best Practices
 
 ## Constraints

@@ -1,8 +1,7 @@
 ---
 trigger: glob
-globs: "src/stores/**/*.ts,src/features/**/stores/**/*.ts"
+globs: 'src/stores/**/*.ts,src/features/**/stores/**/*.ts'
 ---
-
 # State Management
 
 ## Constraints

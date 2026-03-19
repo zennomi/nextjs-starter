@@ -1,8 +1,7 @@
 ---
 trigger: glob
-globs: "src/app/**/{page,layout,loading,error,not-found}.tsx"
+globs: 'src/app/**/{page,layout,loading,error,not-found}.tsx'
 ---
-
 # Next.js 16 App Router Constitution
 
 ## Constraints

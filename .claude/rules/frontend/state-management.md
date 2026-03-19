@@ -3,7 +3,6 @@ paths:
   - src/stores/**/*.ts
   - src/features/**/stores/**/*.ts
 ---
-
 # State Management
 
 ## Constraints

@@ -1,8 +1,7 @@
 ---
 trigger: glob
-globs: "**/*.{ts,tsx}"
+globs: '**/*.{ts,tsx}'
 ---
-
 # TypeScript
 
 ## Constraints

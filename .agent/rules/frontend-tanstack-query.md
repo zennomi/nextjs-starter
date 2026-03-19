@@ -3,7 +3,6 @@ trigger: glob
 globs: >-
   src/features/**/api/*.{ts,tsx},src/features/**/hooks/*.{ts,tsx},src/providers/query-provider.tsx
 ---
-
 # TanStack Query
 
 ## Constraints

@@ -1,8 +1,7 @@
 ---
 trigger: glob
-globs: "src/components/**/*.{ts,tsx},src/features/**/components/**/*.{ts,tsx}"
+globs: 'src/components/**/*.{ts,tsx},src/features/**/components/**/*.{ts,tsx}'
 ---
-
 # UI Components
 
 ## Constraints

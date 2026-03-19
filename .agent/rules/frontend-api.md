@@ -1,8 +1,7 @@
 ---
 trigger: glob
-globs: "src/lib/api.ts,src/features/**/api/*.{ts,tsx}"
+globs: 'src/lib/api.ts,src/features/**/api/*.{ts,tsx}'
 ---
-
 # API Layer
 
 ## Constraints

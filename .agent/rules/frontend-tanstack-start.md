@@ -1,8 +1,7 @@
 ---
 trigger: glob
-globs: "src/routes/**/*.{ts,tsx}"
+globs: 'src/routes/**/*.{ts,tsx}'
 ---
-
 # TanStack Start Constitution
 
 ## Constraints

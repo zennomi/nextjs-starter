@@ -1,8 +1,7 @@
 ---
 paths:
-  - "**/*"
+  - '**/*'
 ---
-
 # Core Constitution
 
 ## Constraints

@@ -3,7 +3,6 @@ paths:
   - src/features/**/components/*Form*.tsx
   - src/features/**/schemas/*.ts
 ---
-
 # Form Management
 
 ## Constraints

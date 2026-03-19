@@ -2,7 +2,7 @@
 
 A production-ready **Next.js 16** boilerplate designed for scalability, performance, and developer happiness.
 
-> **Nizam** is a Turkish word that means _"structure, organization, and harmony.”_
+> **Nizam** is a word that means _"structure, organization, and harmony.”_
 
 ![Next.js](https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
@@ -213,7 +213,7 @@ Benefits include automatic release notes and semantic versioning based on commit
 
 ---
 
-Created by [Ömer Gülçiçek](https://github.com/omergulcicek)
+Created by [Omer Gulcicek](https://github.com/omergulcicek)
 
 > If you find this project useful, please consider giving it a ⭐. Issues and PRs are welcome.
 >

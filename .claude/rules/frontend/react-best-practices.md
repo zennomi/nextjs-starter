@@ -1,9 +1,8 @@
 ---
 paths:
-  - "src/components/**/*.{ts,tsx}"
-  - "src/hooks/**/*.{ts,tsx}"
+  - 'src/components/**/*.{ts,tsx}'
+  - 'src/hooks/**/*.{ts,tsx}'
 ---
-
 # React Best Practices
 
 ## Constraints

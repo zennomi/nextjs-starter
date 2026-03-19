@@ -1,8 +1,7 @@
 ---
 paths:
-  - "**/*.{ts,tsx}"
+  - '**/*.{ts,tsx}'
 ---
-
 # TypeScript
 
 ## Constraints

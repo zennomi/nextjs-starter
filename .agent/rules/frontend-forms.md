@@ -1,8 +1,7 @@
 ---
 trigger: glob
-globs: "src/features/**/components/*Form*.tsx,src/features/**/schemas/*.ts"
+globs: 'src/features/**/components/*Form*.tsx,src/features/**/schemas/*.ts'
 ---
-
 # Form Management
 
 ## Constraints
