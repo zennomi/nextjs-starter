@@ -2,20 +2,20 @@
 
 ## Technical Stack (SSOT)
 
-| Layer            | Technology           | Authority (Rule Ref)   |
-| :--------------- | :------------------- | :--------------------- |
-| **Server State** | TanStack Query       | `tanstack-query.mdc`   |
-| **Client State** | Zustand              | `state-management.mdc` |
-| **Validation**   | Zod                  | `typescript.mdc`       |
-| **UI / Styling** | shadcn/ui + Tailwind | `ui-components.mdc`    |
-| **API Client**   | Axios (Centralized)  | `api.mdc`              |
+| Layer            | Technology           | Authority (Rule Ref)  |
+| :--------------- | :------------------- | :-------------------- |
+| **Server State** | TanStack Query       | `tanstack-query.md`   |
+| **Client State** | Zustand              | `state-management.md` |
+| **Validation**   | Zod                  | `typescript.md`       |
+| **UI / Styling** | shadcn/ui + Tailwind | `ui-components.md`    |
+| **API Client**   | Axios (Centralized)  | `api.md`              |
 
 ## Framework Isolation Boundary
 
-Implementation details for Next.js and TanStack Start are strictly segregated. Framework-specific patterns are delegated to their respective .mdc rules.
+Implementation details for Next.js and TanStack Start are strictly segregated. Framework-specific patterns are delegated to their respective .md rules.
 
-- **Next.js 16:** See `.cursor/rules/frontend/nextjs.mdc`
-- **TanStack Start:** See `.cursor/rules/frontend/tanstack-start.mdc`
+- **Next.js 16:** See `.rulesync/rules/frontend/nextjs.md`
+- **TanStack Start:** See `.rulesync/rules/frontend/tanstack-start.md`
 
 **Shared Layer:** Reserved strictly for framework-agnostic code (`shared/schemas`, `ui-primitives`).
 
@@ -88,19 +88,19 @@ Rendering strategies (RSC vs Client) and Data Fetching patterns are governed by 
 - **No HTTP in UI:** UI layer is FORBIDDEN from using `axios` or `fetch` directly. Consume only `features/api` functions.
 - **Insecure Scripts:** All content MUST adhere to the project's Content Security Policy; `unsafe-inline` and `unsafe-eval` are strictly forbidden.
 
-## Canonical Rules (MDC Refs)
+## Canonical Rules (MD Refs)
 
 This document is the architectural map. Enforceable laws are located in:
 
-- `Ref: .cursor/rules/core-principles.mdc`
-- `Ref: .cursor/rules/frontend/api.mdc`
-- `Ref: .cursor/rules/frontend/forms.mdc`
-- `Ref: .cursor/rules/frontend/nextjs.mdc`
-- `Ref: .cursor/rules/frontend/performance.mdc`
-- `Ref: .cursor/rules/frontend/react-best-practices.mdc`
-- `Ref: .cursor/rules/frontend/state-management.mdc`
-- `Ref: .cursor/rules/frontend/tanstack-query.mdc`
-- `Ref: .cursor/rules/frontend/tanstack-start.mdc`
-- `Ref: .cursor/rules/frontend/testing.mdc`
-- `Ref: .cursor/rules/frontend/typescript.mdc`
-- `Ref: .cursor/rules/frontend/ui-components.mdc`
+- `Ref: .rulesync/rules/core-principles.md`
+- `Ref: .rulesync/rules/frontend/api.md`
+- `Ref: .rulesync/rules/frontend/forms.md`
+- `Ref: .rulesync/rules/frontend/nextjs.md`
+- `Ref: .rulesync/rules/frontend/performance.md`
+- `Ref: .rulesync/rules/frontend/react-best-practices.md`
+- `Ref: .rulesync/rules/frontend/state-management.md`
+- `Ref: .rulesync/rules/frontend/tanstack-query.md`
+- `Ref: .rulesync/rules/frontend/tanstack-start.md`
+- `Ref: .rulesync/rules/frontend/testing.md`
+- `Ref: .rulesync/rules/frontend/typescript.md`
+- `Ref: .rulesync/rules/frontend/ui-components.md`
