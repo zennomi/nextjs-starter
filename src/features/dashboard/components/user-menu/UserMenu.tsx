@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 import { LogOut } from "lucide-react";
 
@@ -46,11 +47,13 @@ export function UserMenu() {
         <Button variant="outline" className="h-11 gap-3 px-3">
           <span className="flex size-9 items-center justify-center overflow-hidden rounded-full bg-primary/10 text-sm font-semibold text-primary">
             {showImage ? (
-              <img
+              <Image
                 src={user.image}
                 alt={user.username}
-                className="h-full w-full object-cover"
+                className="object-cover"
+                fill
                 onError={() => setBrokenImageSrc(user.image)}
+                unoptimized
               />
             ) : (
               <span>{initials}</span>

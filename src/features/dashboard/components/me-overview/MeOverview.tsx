@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/ui";
 import { useCurrentUser } from "@/features/dashboard/hooks/use-current-user";
 
@@ -37,11 +39,15 @@ export function MeOverview() {
       <Card className="overflow-hidden">
         <CardHeader className="border-b bg-muted/40">
           <div className="flex flex-col gap-4 md:flex-row md:items-center">
-            <img
-              src={user.image}
-              alt={user.username}
-              className="size-20 rounded-full border object-cover"
-            />
+            <div className="relative size-20 rounded-full border">
+              <Image
+                src={user.image}
+                alt={user.username}
+                className="object-cover"
+                fill
+                unoptimized
+              />
+            </div>
             <div className="space-y-1">
               <CardTitle className="text-2xl">{user.username}</CardTitle>
               <CardDescription>{user.email}</CardDescription>
