@@ -1,13 +1,9 @@
 ---
 paths:
-  - "src/app/**/*.{ts"
-  - "tsx}"
-  - "src/routes/**/*.{ts"
-  - "tsx}"
-  - "src/components/**/*.{ts"
-  - "tsx}"
-  - "src/features/**/components/**/*.{ts"
-  - "tsx}"
+  - "src/app/**/*.{ts,tsx}"
+  - "src/routes/**/*.{ts,tsx}"
+  - "src/components/**/*.{ts,tsx}"
+  - "src/features/**/components/**/*.{ts,tsx}"
 ---
 
 # Performance & Accessibility (Lighthouse 95+)

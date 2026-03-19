@@ -1,8 +1,7 @@
 ---
 paths:
   - src/lib/api.ts
-  - "src/features/**/api/*.{ts"
-  - "tsx}"
+  - "src/features/**/api/*.{ts,tsx}"
 ---
 
 # API Layer

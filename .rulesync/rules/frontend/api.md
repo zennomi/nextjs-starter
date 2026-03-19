@@ -5,15 +5,10 @@ targets:
 description: "USE WHEN: Defining HTTP requests, endpoints, and handling API responses."
 globs:
   - src/lib/api.ts
-  - "src/features/**/api/*.{ts"
-  - "tsx}"
+  - src/features/**/api/*.{ts,tsx}
 cursor:
   alwaysApply: false
   description: "USE WHEN: Defining HTTP requests, endpoints, and handling API responses."
-  globs:
-    - src/lib/api.ts
-    - "src/features/**/api/*.{ts"
-    - "tsx}"
 ---
 
 # API Layer

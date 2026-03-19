@@ -6,16 +6,12 @@ description: >-
   USE WHEN: Defining TypeScript types, Zod schemas, and generic constraints for
   type safety.
 globs:
-  - "**/*.{ts"
-  - "tsx}"
+  - "**/*.{ts,tsx}"
 cursor:
   alwaysApply: false
   description: >-
     USE WHEN: Defining TypeScript types, Zod schemas, and generic constraints
     for type safety.
-  globs:
-    - "**/*.{ts"
-    - "tsx}"
 ---
 
 # TypeScript

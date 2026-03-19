@@ -6,22 +6,14 @@ description: >-
   USE WHEN: Managing server state, fetching data, and handling mutations with
   TanStack Query.
 globs:
-  - "src/features/**/api/*.{ts"
-  - "tsx}"
-  - "src/features/**/hooks/*.{ts"
-  - "tsx}"
+  - src/features/**/api/*.{ts,tsx}
+  - src/features/**/hooks/*.{ts,tsx}
   - src/providers/query-provider.tsx
 cursor:
   alwaysApply: false
   description: >-
     USE WHEN: Managing server state, fetching data, and handling mutations with
     TanStack Query.
-  globs:
-    - "src/features/**/api/*.{ts"
-    - "tsx}"
-    - "src/features/**/hooks/*.{ts"
-    - "tsx}"
-    - src/providers/query-provider.tsx
 ---
 
 # TanStack Query

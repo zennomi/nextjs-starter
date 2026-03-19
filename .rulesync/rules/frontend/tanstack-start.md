@@ -4,14 +4,10 @@ targets:
   - "*"
 description: "TanStack Start Routing, Loaders, and Server Functions Standards"
 globs:
-  - "src/routes/**/*.{ts"
-  - "tsx}"
+  - src/routes/**/*.{ts,tsx}
 cursor:
   alwaysApply: false
   description: "TanStack Start Routing, Loaders, and Server Functions Standards"
-  globs:
-    - "src/routes/**/*.{ts"
-    - "tsx}"
 ---
 
 # TanStack Start Constitution

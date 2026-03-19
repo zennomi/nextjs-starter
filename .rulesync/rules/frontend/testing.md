@@ -6,18 +6,12 @@ description: >-
   USE WHEN: Writing unit, integration, or component tests. Mandatory for logic
   in features.
 globs:
-  - "**/*.{test"
-  - "spec}.{ts"
-  - "tsx}"
+  - "**/*.{test,spec}.{ts,tsx}"
 cursor:
   alwaysApply: false
   description: >-
     USE WHEN: Writing unit, integration, or component tests. Mandatory for logic
     in features.
-  globs:
-    - "**/*.{test"
-    - "spec}.{ts"
-    - "tsx}"
 ---
 
 # Testing Guide (Pragmatic)

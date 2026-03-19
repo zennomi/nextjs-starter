@@ -4,20 +4,10 @@ targets:
   - "*"
 description: Next.js 16 App Router Standards & Constraints
 globs:
-  - "src/app/**/{page"
-  - layout
-  - loading
-  - error
-  - "not-found}.tsx"
+  - src/app/**/{page,layout,loading,error,not-found}.tsx
 cursor:
   alwaysApply: false
   description: Next.js 16 App Router Standards & Constraints
-  globs:
-    - "src/app/**/{page"
-    - layout
-    - loading
-    - error
-    - "not-found}.tsx"
 ---
 
 # Next.js 16 App Router Constitution

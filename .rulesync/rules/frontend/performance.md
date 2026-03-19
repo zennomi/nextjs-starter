@@ -6,28 +6,15 @@ description: >-
   USE WHEN: Optimizing Core Web Vitals, managing assets, and ensuring high
   Lighthouse/A11y scores.
 globs:
-  - "src/app/**/*.{ts"
-  - "tsx}"
-  - "src/routes/**/*.{ts"
-  - "tsx}"
-  - "src/components/**/*.{ts"
-  - "tsx}"
-  - "src/features/**/components/**/*.{ts"
-  - "tsx}"
+  - src/app/**/*.{ts,tsx}
+  - src/routes/**/*.{ts,tsx}
+  - src/components/**/*.{ts,tsx}
+  - src/features/**/components/**/*.{ts,tsx}
 cursor:
   alwaysApply: false
   description: >-
     USE WHEN: Optimizing Core Web Vitals, managing assets, and ensuring high
     Lighthouse/A11y scores.
-  globs:
-    - "src/app/**/*.{ts"
-    - "tsx}"
-    - "src/routes/**/*.{ts"
-    - "tsx}"
-    - "src/components/**/*.{ts"
-    - "tsx}"
-    - "src/features/**/components/**/*.{ts"
-    - "tsx}"
 ---
 
 # Performance & Accessibility (Lighthouse 95+)

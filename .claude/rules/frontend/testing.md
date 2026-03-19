@@ -1,8 +1,6 @@
 ---
 paths:
-  - "**/*.{test"
-  - "spec}.{ts"
-  - "tsx}"
+  - "**/*.{test,spec}.{ts,tsx}"
 ---
 
 # Testing Guide (Pragmatic)

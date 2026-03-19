@@ -1,7 +1,6 @@
 ---
 paths:
-  - "src/routes/**/*.{ts"
-  - "tsx}"
+  - "src/routes/**/*.{ts,tsx}"
 ---
 
 # TanStack Start Constitution

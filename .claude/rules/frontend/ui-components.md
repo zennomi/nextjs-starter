@@ -1,9 +1,7 @@
 ---
 paths:
-  - "src/components/**/*.{ts"
-  - "tsx}"
-  - "src/features/**/components/**/*.{ts"
-  - "tsx}"
+  - "src/components/**/*.{ts,tsx}"
+  - "src/features/**/components/**/*.{ts,tsx}"
 ---
 
 # UI Components

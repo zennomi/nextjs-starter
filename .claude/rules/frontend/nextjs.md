@@ -1,10 +1,6 @@
 ---
 paths:
-  - "src/app/**/{page"
-  - layout
-  - loading
-  - error
-  - "not-found}.tsx"
+  - "src/app/**/{page,layout,loading,error,not-found}.tsx"
 ---
 
 # Next.js 16 App Router Constitution

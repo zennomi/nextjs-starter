@@ -6,20 +6,13 @@ description: >-
   USE WHEN: Building UI components, structuring layouts, and applying styles
   using Tailwind CSS.
 globs:
-  - "src/components/**/*.{ts"
-  - "tsx}"
-  - "src/features/**/components/**/*.{ts"
-  - "tsx}"
+  - src/components/**/*.{ts,tsx}
+  - src/features/**/components/**/*.{ts,tsx}
 cursor:
   alwaysApply: false
   description: >-
     USE WHEN: Building UI components, structuring layouts, and applying styles
     using Tailwind CSS.
-  globs:
-    - "src/components/**/*.{ts"
-    - "tsx}"
-    - "src/features/**/components/**/*.{ts"
-    - "tsx}"
 ---
 
 # UI Components

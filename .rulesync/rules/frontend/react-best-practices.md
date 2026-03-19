@@ -6,20 +6,13 @@ description: >-
   USE WHEN: Designing React components, implementing hooks, and managing
   component lifecycles.
 globs:
-  - "src/components/**/*.{ts"
-  - "tsx}"
-  - "src/hooks/**/*.{ts"
-  - "tsx}"
+  - src/components/**/*.{ts,tsx}
+  - src/hooks/**/*.{ts,tsx}
 cursor:
   alwaysApply: false
   description: >-
     USE WHEN: Designing React components, implementing hooks, and managing
     component lifecycles.
-  globs:
-    - "src/components/**/*.{ts"
-    - "tsx}"
-    - "src/hooks/**/*.{ts"
-    - "tsx}"
 ---
 
 # React Best Practices
