@@ -9,7 +9,7 @@ export function Footer() {
           <span>Project by</span>
 
           <figure className="flex items-center gap-2">
-            <Image src="/nice-avatar.png" alt="Ömer Gülçiçek Avatar" width={32} height={32} />
+            <Image src="/nice-avatar.png" alt="Omer Gulcicek Avatar" width={32} height={32} />
             <figcaption>
               <Link
                 href="https://omergulcicek.com?utm_source=nextjs-boilerplate"
@@ -17,7 +17,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="font-bold hover:underline"
               >
-                Ömer Gülçiçek
+                Omer Gulcicek
               </Link>
             </figcaption>
           </figure>

@@ -6,7 +6,7 @@ export const siteConfig: SiteConfig = {
   name: "Nizam | Next.js 16 Boilerplate",
   description: "Production-ready Next.js 16+ starter built with Tailwind CSS 4 and TypeScript.",
   url: env.NEXT_PUBLIC_SITE_URL,
-  author: "Ömer Gülçiçek",
+  author: "Omer Gulcicek",
   locale: "en-US",
   themeColor: "#ffffff",
   keywords: ["nextjs", "typescript", "tailwindcss", "boilerplate", "starter"],

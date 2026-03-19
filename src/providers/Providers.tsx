@@ -1,11 +1,16 @@
 "use client";
 
-import { QueryProvider, ThemeProvider } from "@/providers";
+import { AuthBootstrap } from "@/providers/AuthBootstrap";
+import { QueryProvider } from "@/providers/QueryProvider";
+import { ThemeProvider } from "@/providers/ThemeProvider";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider>
-      <QueryProvider>{children}</QueryProvider>
+      <QueryProvider>
+        <AuthBootstrap />
+        {children}
+      </QueryProvider>
     </ThemeProvider>
   );
 }
