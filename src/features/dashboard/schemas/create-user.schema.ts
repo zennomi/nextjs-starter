@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { UserSchema } from "@/features/dashboard/schemas/user.schema";
+import { UserSchema } from "@/schemas/user.schema";
 
 const passwordPattern = /^[\d!#$%&*@A-Z^a-z]*$/;
 

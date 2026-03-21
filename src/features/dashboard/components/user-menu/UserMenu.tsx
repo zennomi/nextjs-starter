@@ -14,8 +14,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger
 } from "@/ui";
-import { useCurrentUser } from "@/features/dashboard/hooks/use-current-user";
-import { useLogout } from "@/features/dashboard/hooks/use-logout";
+import { useCurrentUser } from "@/features/auth/hooks/use-current-user";
+import { useLogout } from "@/features/auth/hooks/use-logout";
 
 const getInitials = (username: string): string =>
   username

@@ -4,6 +4,8 @@ import { useState } from "react";
 
 import { ArrowDownAZ, ArrowUpAZ, Plus } from "lucide-react";
 
+import { type UsersListParams } from "@/schemas/user.schema";
+
 import {
   Button,
   Card,
@@ -20,7 +22,6 @@ import {
 } from "@/ui";
 import { CreateUserForm } from "@/features/dashboard/components/create-user-form";
 import { useUsers } from "@/features/dashboard/hooks/use-users";
-import { type UsersListParams } from "@/features/dashboard/schemas/user.schema";
 
 const defaultParams: UsersListParams = {
   limit: 10,

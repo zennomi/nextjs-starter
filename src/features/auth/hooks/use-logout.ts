@@ -8,7 +8,7 @@ import { AppError } from "@/lib/app-error";
 
 import { clearAuthSession } from "@/stores/auth.store";
 
-import { logout } from "@/features/dashboard/api/logout.api";
+import { logout } from "@/features/auth/api/logout.api";
 
 export const useLogout = () => {
   const router = useRouter();

@@ -4,7 +4,7 @@ import {
   SignInResponseSchema,
   SignInSchema,
   type SignInValues
-} from "@/features/dashboard/schemas/auth.schema";
+} from "@/features/auth/schemas/auth.schema";
 
 export const signIn = async (payload: SignInValues) => {
   const body = SignInSchema.parse(payload);

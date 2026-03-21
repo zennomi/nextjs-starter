@@ -2,14 +2,12 @@
 
 import { useQuery } from "@tanstack/react-query";
 
+import { UsersListParamsSchema, type UsersListParams } from "@/schemas/user.schema";
+
 import { useAuthStore } from "@/stores/auth.store";
 
 import { getUsers } from "@/features/dashboard/api/get-users.api";
 import { dashboardKeys } from "@/features/dashboard/api/query-keys";
-import {
-  UsersListParamsSchema,
-  type UsersListParams
-} from "@/features/dashboard/schemas/user.schema";
 
 export const useUsers = (input: Partial<UsersListParams>) => {
   const hasHydrated = useAuthStore((state) => state.hasHydrated);

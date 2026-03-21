@@ -14,16 +14,28 @@ import {
 import { ArrowUpDown } from "lucide-react";
 
 import { Input, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/ui";
-import { useUsers } from "@/features/landing/hooks/use-users";
-import type { User } from "@/features/landing/types/user.types";
+
+type ShowcaseUser = {
+  id: number;
+  name: string;
+  email: string;
+};
+
+const DEMO_USERS: ShowcaseUser[] = [
+  { id: 1, name: "Alex Rivera", email: "alex@example.com" },
+  { id: 2, name: "Sam Chen", email: "sam@example.com" },
+  { id: 3, name: "Jordan Lee", email: "jordan@example.com" },
+  { id: 4, name: "Riley Patel", email: "riley@example.com" },
+  { id: 5, name: "Casey Morgan", email: "casey@example.com" }
+];
 
 export function UserList() {
-  const { data = [], isPending, isError, error } = useUsers();
+  const data = DEMO_USERS;
 
   const [sorting, setSorting] = useState<SortingState>([]);
   const [globalFilter, setGlobalFilter] = useState<string>("");
 
-  const columns = useMemo<ColumnDef<User>[]>(
+  const columns = useMemo<ColumnDef<ShowcaseUser>[]>(
     () => [
       {
         accessorKey: "id",
@@ -68,7 +80,7 @@ export function UserList() {
    */
   // eslint-disable-next-line react-hooks/incompatible-library
   const table = useReactTable({
-    data: data ?? [],
+    data,
     columns,
     onSortingChange: setSorting,
     getCoreRowModel: getCoreRowModel(),
@@ -77,14 +89,6 @@ export function UserList() {
     onGlobalFilterChange: setGlobalFilter,
     state: { sorting, globalFilter }
   });
-
-  if (isError) {
-    return (
-      <section className="mt-10">
-        <div>Error: {error instanceof Error ? error.message : String(error)}</div>
-      </section>
-    );
-  }
 
   return (
     <section className="col-span-3 lg:col-span-2">
@@ -112,13 +116,7 @@ export function UserList() {
             ))}
           </TableHeader>
           <TableBody>
-            {isPending ? (
-              <TableRow>
-                <TableCell colSpan={columns.length} className="h-24 text-center">
-                  Loading...
-                </TableCell>
-              </TableRow>
-            ) : table.getRowModel().rows?.length ? (
+            {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
                 <TableRow key={row.id}>
                   {row.getVisibleCells().map((cell) => (

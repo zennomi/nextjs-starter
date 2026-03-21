@@ -1,11 +1,11 @@
-import { get } from "@/lib/api";
-
 import {
   UsersListParamsSchema,
   UsersListResponseSchema,
   type UsersListParams,
   type UsersListResponse
-} from "@/features/dashboard/schemas/user.schema";
+} from "@/schemas/user.schema";
+
+import { get } from "@/lib/api";
 
 export const getUsers = async (
   input: Partial<UsersListParams>,

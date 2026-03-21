@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/ui";
-import { useCurrentUser } from "@/features/dashboard/hooks/use-current-user";
+import { useCurrentUser } from "@/features/auth/hooks/use-current-user";
 
 export function MeOverview() {
   const { data: user, isPending, isError, error } = useCurrentUser();

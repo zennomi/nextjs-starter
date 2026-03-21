@@ -7,7 +7,7 @@ import { getStoredAuthSession, isAccessTokenExpired, type AuthSession } from "@/
 
 import { clearAuthSession, setAuthSession, useAuthStore } from "@/stores/auth.store";
 
-import { RefreshTokenResponseSchema } from "@/features/dashboard/schemas/auth.schema";
+import { RefreshTokenResponseSchema } from "@/features/auth/schemas/auth.schema";
 
 export const api = axios.create({
   baseURL: env.NEXT_PUBLIC_API_URL,

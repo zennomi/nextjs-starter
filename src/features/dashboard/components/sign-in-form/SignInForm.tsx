@@ -27,8 +27,8 @@ import {
   FormMessage,
   Input
 } from "@/ui";
-import { useSignIn } from "@/features/dashboard/hooks/use-sign-in";
-import { SignInSchema, type SignInValues } from "@/features/dashboard/schemas/auth.schema";
+import { useSignIn } from "@/features/auth/hooks/use-sign-in";
+import { SignInSchema, type SignInValues } from "@/features/auth/schemas/auth.schema";
 
 export function SignInForm() {
   const router = useRouter();
