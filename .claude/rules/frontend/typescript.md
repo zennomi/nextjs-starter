@@ -17,7 +17,7 @@ paths:
 ## Bans
 
 - `any`.
-- `as Type` (except in tests).
+- `as Type`.
 - `!` (Non-null assertion).
 - Using Interface and Type simultaneously.
 - `I` or `T` prefixes (`IUser`).

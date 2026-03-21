@@ -41,11 +41,11 @@ Nizam is fully aligned with 2026 AI-driven development standards. It is built on
 
 - **.cursor/rules**: Project-specific rules ensure that when coding with AI assistance, Nizam’s architectural conventions stay consistent.
 
-## Why No Auth or Testing?
+## Why No Auth?
 
-Nizam aims to stay minimalist and lightweight instead of shipping an “everything included” bundle. Unlike many boilerplates, we deliberately omit Auth and Testing layers:
+Nizam aims to stay minimalist and lightweight instead of shipping an “everything included” bundle. Unlike many boilerplates, we deliberately omit an Auth layer:
 
-- **Flexibility**: Every project has different needs for Auth (Clerk, Auth.js, etc.) or Testing (Vitest, Playwright). Nizam does not lock you into one choice; it gives you a clean foundation.
+- **Flexibility**: Every project has different needs for Auth (Clerk, Auth.js, etc.). Nizam does not lock you into one choice; it gives you a clean foundation.
 - **Zero bloat**: The project stays lean and avoids dependencies you may never use.
 - **Fast start**: Skip unnecessary setup and focus on business logic from day one.
 

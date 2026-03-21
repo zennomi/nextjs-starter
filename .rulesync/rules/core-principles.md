@@ -25,7 +25,7 @@ cursor:
 - **Minimal Intervention:** Modify only necessary areas.
 - **Source of Truth:** Reference the codebase. Correct it if erroneous.
 - **Boy Scout:** Clean unused imports, `console.log`, and dead code.
-- **Naming:** `kebab-case` for folders/non-component files; `PascalCase` for React components. File type suffixes: `*.types.ts`, `*.constants.ts`, `*.config.ts`, `*.test.ts`, `*.spec.ts`, `*.stories.tsx`, `*.schema.ts`, `*.api.ts`, `*.store.ts` (base name in kebab-case).
+- **Naming:** `kebab-case` for folders/non-component files; `PascalCase` for React components. File type suffixes: `*.types.ts`, `*.constants.ts`, `*.config.ts`, `*.stories.tsx`, `*.schema.ts`, `*.api.ts`, `*.store.ts` (base name in kebab-case).
 - **Exports:** Group exports with `index.ts`.
 - **No Silent Failures:** Do not swallow errors. Manage `try/catch` blocks.
 - **Secret Protection:** Do not log `.env` content.

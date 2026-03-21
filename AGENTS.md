@@ -1,6 +1,6 @@
 Please also reference the following rules as needed. The list below is provided in TOON format, and `@` stands for the project root directory.
 
-rules[12]:
+rules[11]:
 
 - path: @.codex/memories/core-principles.md
   description: "USE WHEN: Applying core principles and enforcing global project constraints."
@@ -29,9 +29,6 @@ rules[12]:
 - path: @.codex/memories/frontend/tanstack-start.md
   description: "TanStack Start Routing, Loaders, and Server Functions Standards"
   applyTo[1]: "src/routes/\*_/_.{ts,tsx}"
-- path: @.codex/memories/frontend/testing.md
-  description: "USE WHEN: Writing unit, integration, or component tests. Mandatory for logic in features."
-  applyTo[1]: "\*_/_.{test,spec}.{ts,tsx}"
 - path: @.codex/memories/frontend/typescript.md
   description: "USE WHEN: Defining TypeScript types, Zod schemas, and generic constraints for type safety."
   applyTo[1]: "\*_/_.{ts,tsx}"

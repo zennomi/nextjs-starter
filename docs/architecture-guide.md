@@ -101,6 +101,5 @@ This document is the architectural map. Enforceable laws are located in:
 - `Ref: .rulesync/rules/frontend/state-management.md`
 - `Ref: .rulesync/rules/frontend/tanstack-query.md`
 - `Ref: .rulesync/rules/frontend/tanstack-start.md`
-- `Ref: .rulesync/rules/frontend/testing.md`
 - `Ref: .rulesync/rules/frontend/typescript.md`
 - `Ref: .rulesync/rules/frontend/ui-components.md`
