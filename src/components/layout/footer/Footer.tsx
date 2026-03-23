@@ -12,7 +12,7 @@ export function Footer() {
             <Image src="/nice-avatar.png" alt="Omer Gulcicek Avatar" width={32} height={32} />
             <figcaption>
               <Link
-                href="https://omergulcicek.com?utm_source=nextjs-boilerplate"
+                href="https://github.com/zennomi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-bold hover:underline"

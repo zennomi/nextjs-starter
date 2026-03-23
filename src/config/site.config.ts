@@ -3,7 +3,7 @@ import { env } from "@/env";
 
 // FIXME: Update site branding, default locale, theme color, social links and OG image
 export const siteConfig: SiteConfig = {
-  name: "Nizam | Next.js 16 Boilerplate",
+  name: "Next.js 16 Boilerplate",
   description: "Production-ready Next.js 16+ starter built with Tailwind CSS 4 and TypeScript.",
   url: env.NEXT_PUBLIC_SITE_URL,
   author: "Omer Gulcicek",
@@ -11,9 +11,9 @@ export const siteConfig: SiteConfig = {
   themeColor: "#ffffff",
   keywords: ["nextjs", "typescript", "tailwindcss", "boilerplate", "starter"],
   social: {
-    twitter: "@omergulcicek",
-    github: "omergulcicek",
-    linkedin: "omergulcicek"
+    twitter: "@zennomi",
+    github: "zennomi",
+    linkedin: "zennomi"
   },
   ogImage: "/og.jpg"
 } as const;

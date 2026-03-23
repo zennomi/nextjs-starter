@@ -1,8 +1,8 @@
-# Nizam — A Modern Next.js 16 Boilerplate
+# Next.js Starter — A Modern Next.js 16 Boilerplate
 
 A production-ready **Next.js 16** boilerplate designed for scalability, performance, and developer happiness.
 
-> **Nizam** is a word that means _"structure, organization, and harmony.”_
+> **Next.js Starter**
 
 ![Next.js](https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
@@ -33,19 +33,19 @@ A production-ready **Next.js 16** boilerplate designed for scalability, performa
 
 ## Built with Kaide
 
-Nizam is designed and powered by [Kaide](https://github.com/omergulcicek/kaide), an AI-native architecture kit for modern React. The governance layer that ships with Nizam—`.cursor/rules`, `docs/`, and `AGENTS.md`—is derived from Kaide and is included by default; no extra setup is required. For the upstream project, updates, or to use Kaide in other codebases, see the [Kaide repository](https://github.com/omergulcicek/kaide).
+Next.js Starter is designed and powered by [Kaide](https://github.com/omergulcicek/kaide), an AI-native architecture kit for modern React. The governance layer that ships with Next.js Starter—`.cursor/rules`, `docs/`, and `AGENTS.md`—is derived from Kaide and is included by default; no extra setup is required. For the upstream project, updates, or to use Kaide in other codebases, see the [Kaide repository](https://github.com/omergulcicek/kaide).
 
 ## AI-Ready Architecture
 
-Nizam is fully aligned with 2026 AI-driven development standards. It is built on [Kaide](https://github.com/omergulcicek/kaide) (see **Built with Kaide** above). So that AI agents (Cursor, Windsurf, etc.) can understand the project in seconds, it includes the following optimizations:
+Next.js Starter is fully aligned with 2026 AI-driven development standards. It is built on [Kaide](https://github.com/omergulcicek/kaide) (see **Built with Kaide** above). So that AI agents (Cursor, Windsurf, etc.) can understand the project in seconds, it includes the following optimizations:
 
-- **.cursor/rules**: Project-specific rules ensure that when coding with AI assistance, Nizam’s architectural conventions stay consistent.
+- **.cursor/rules**: Project-specific rules ensure that when coding with AI assistance, Next.js Starter's architectural conventions stay consistent.
 
 ## Why No Auth?
 
-Nizam aims to stay minimalist and lightweight instead of shipping an “everything included” bundle. Unlike many boilerplates, we deliberately omit an Auth layer:
+Next.js Starter aims to stay minimalist and lightweight instead of shipping an “everything included” bundle. Unlike many boilerplates, we deliberately omit an Auth layer:
 
-- **Flexibility**: Every project has different needs for Auth (Clerk, Auth.js, etc.). Nizam does not lock you into one choice; it gives you a clean foundation.
+- **Flexibility**: Every project has different needs for Auth (Clerk, Auth.js, etc.). Next.js Starter does not lock you into one choice; it gives you a clean foundation.
 - **Zero bloat**: The project stays lean and avoids dependencies you may never use.
 - **Fast start**: Skip unnecessary setup and focus on business logic from day one.
 
@@ -60,7 +60,7 @@ To run this project locally, follow the steps below.
 ### Installation
 
 ```bash
-git clone --depth=1 https://github.com/omergulcicek/nizam my-project
+git clone --depth=1 https://github.com/zennomi/nextjs-starter my-project
 cd my-project
 npm install
 npm run dev
@@ -213,8 +213,8 @@ Benefits include automatic release notes and semantic versioning based on commit
 
 ---
 
-Created by [Omer Gulcicek](https://github.com/omergulcicek)
+Created by [zennomi](https://github.com/zennomi)
 
 > If you find this project useful, please consider giving it a ⭐. Issues and PRs are welcome.
 >
-> Support: [Sponsor on GitHub](https://github.com/sponsors/omergulcicek) or <a href="mailto:iletisim@omergulcicek.com">iletisim@omergulcicek.com</a>
+> Support: [Sponsor on GitHub](https://github.com/sponsors/zennomi) or <a href="mailto:zennomi@github.com">zennomi@github.com</a>

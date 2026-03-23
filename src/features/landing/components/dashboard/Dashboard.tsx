@@ -17,7 +17,7 @@ export function Dashboard() {
           as="h1"
           className="text-center text-2xl font-bold text-black lg:text-5xl dark:text-white"
         >
-          Nizam - Next.js 16 Boilerplate
+          zennomi/nextjs-starter
         </Balancer>
 
         <Balancer as="p" className="max-w-3xl px-3 text-center text-base">
@@ -35,7 +35,7 @@ export function Dashboard() {
       <div className="flex items-center justify-center gap-4">
         <Button variant="outline" size="sm" asChild>
           <Link
-            href="https://vercel.com/new/clone?repository-url=https://github.com/omergulcicek/nizam"
+            href="https://vercel.com/new/clone?repository-url=https://github.com/zennomi/nextjs-starter"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -45,7 +45,7 @@ export function Dashboard() {
         </Button>
         <Button variant="outline" size="sm" asChild>
           <Link
-            href="https://github.com/omergulcicek/nizam/generate"
+            href="https://github.com/zennomi/nextjs-starter/generate"
             target="_blank"
             rel="noopener noreferrer"
           >
