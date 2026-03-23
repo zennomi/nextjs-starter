@@ -13,6 +13,16 @@ export default function nextConfig(phase: string): NextConfig {
     distDir: phase === PHASE_DEVELOPMENT_SERVER ? ".next/dev" : ".next/prod",
     reactCompiler: true,
     htmlLimitedBots: /.*/,
+    images: {
+      remotePatterns:
+        phase === PHASE_DEVELOPMENT_SERVER
+          ? [
+              { protocol: "http", hostname: "**" },
+              { protocol: "https", hostname: "**" }
+            ]
+          : [],
+      dangerouslyAllowLocalIP: phase === PHASE_DEVELOPMENT_SERVER
+    },
     turbopack: {
       rules: {
         "*.svg": {
