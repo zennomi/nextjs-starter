@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const orderValues = ["ASC", "DESC"] as const;
+import { OffsetPaginationSchema, orderValues } from "./common.schema";
 
 export const UserSchema = z.object({
   id: z.string().min(1),
@@ -17,15 +17,6 @@ export const UsersListParamsSchema = z.object({
   limit: z.number().int().min(1).max(100).default(10),
   page: z.number().int().min(1).default(1),
   order: z.enum(orderValues).default("ASC")
-});
-
-export const OffsetPaginationSchema = z.object({
-  limit: z.number().int().min(1),
-  currentPage: z.number().int().min(1),
-  nextPage: z.number().int().min(1).optional(),
-  previousPage: z.number().int().min(1).optional(),
-  totalRecords: z.number().int().min(0),
-  totalPages: z.number().int().min(0)
 });
 
 export const UsersListResponseSchema = z.object({
