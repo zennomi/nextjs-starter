@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 
-import { GitBranch, Rocket } from "lucide-react";
+import { GitBranch, LayoutDashboard, Rocket } from "lucide-react";
 import { Balancer } from "react-wrap-balancer";
+
+import { routes } from "@/config/routes";
 
 import { Button } from "@/ui";
 import { StackList } from "@/features/landing";
@@ -33,6 +35,12 @@ export function Dashboard() {
       <StackList data={stackData} />
 
       <div className="flex items-center justify-center gap-4">
+        <Button variant="default" size="sm" asChild>
+          <Link href={routes.dashboard.me}>
+            <LayoutDashboard className="mr-2 h-4 w-4" aria-hidden="true" />
+            Go to Dashboard
+          </Link>
+        </Button>
         <Button variant="outline" size="sm" asChild>
           <Link
             href="https://vercel.com/new/clone?repository-url=https://github.com/zennomi/nextjs-starter"

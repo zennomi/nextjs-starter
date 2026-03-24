@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 
+import { routes } from "@/config/routes";
+
 import { Button } from "@/ui";
 
 export default function Error({
@@ -25,7 +27,7 @@ export default function Error({
       <div className="flex gap-4">
         <Button onClick={() => reset()}>Try again</Button>
         <Button asChild variant="outline">
-          <Link href="/">Go to home</Link>
+          <Link href={routes.home}>Go to home</Link>
         </Button>
       </div>
     </div>

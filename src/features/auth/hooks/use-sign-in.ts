@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
+import { routes } from "@/config/routes";
+
 import { setAuthSession } from "@/stores/auth.store";
 
 import { authKeys } from "@/features/auth/api/query-keys";
@@ -19,7 +21,7 @@ export const useSignIn = () => {
     onSuccess: async (session) => {
       setAuthSession(session);
       await queryClient.invalidateQueries({ queryKey: authKeys.currentUser() });
-      router.push("/dashboard/me");
+      router.push(routes.dashboard.me);
     }
   });
 };
