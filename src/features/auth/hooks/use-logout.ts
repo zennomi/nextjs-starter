@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
+import { routes } from "@/config/routes";
+
 import { AppError } from "@/lib/app-error";
 
 import { clearAuthSession } from "@/stores/auth.store";
@@ -19,13 +21,13 @@ export const useLogout = () => {
     onSuccess: () => {
       clearAuthSession();
       queryClient.clear();
-      router.replace("/sign-in");
+      router.replace(routes.signIn);
     },
     onError: (error) => {
       if (error instanceof AppError && error.status === 401) {
         clearAuthSession();
         queryClient.clear();
-        router.replace("/sign-in");
+        router.replace(routes.signIn);
       }
     }
   });

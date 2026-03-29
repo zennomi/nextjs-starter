@@ -5,16 +5,18 @@ import { usePathname } from "next/navigation";
 
 import { CircleUserRound, Users } from "lucide-react";
 
+import { routes } from "@/config/routes";
+
 import { cn } from "@/lib/utils";
 
 const navigationItems = [
   {
-    href: "/dashboard/me",
+    href: routes.dashboard.me,
     icon: CircleUserRound,
     label: "me"
   },
   {
-    href: "/dashboard/users",
+    href: routes.dashboard.users,
     icon: Users,
     label: "users"
   }

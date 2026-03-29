@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
+import { routes } from "@/config/routes";
+
 import { useAuthStore } from "@/stores/auth.store";
 
 import { DashboardHeader } from "@/features/dashboard/components/dashboard-header/DashboardHeader";
@@ -19,7 +21,7 @@ export function DashboardShell({
 
   useEffect(() => {
     if (hasHydrated && !session) {
-      router.replace("/sign-in");
+      router.replace(routes.signIn);
     }
   }, [hasHydrated, router, session]);
 

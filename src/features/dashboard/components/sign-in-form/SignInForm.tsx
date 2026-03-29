@@ -8,6 +8,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 
+import { routes } from "@/config/routes";
+
 import { AppError } from "@/lib/app-error";
 
 import { useAuthStore } from "@/stores/auth.store";
@@ -46,7 +48,7 @@ export function SignInForm() {
 
   useEffect(() => {
     if (hasHydrated && session?.accessToken) {
-      router.replace("/dashboard/me");
+      router.replace(routes.dashboard.me);
     }
   }, [hasHydrated, router, session?.accessToken]);
 
